@@ -1,0 +1,4 @@
+#Sun Jul 07 18:34:45 KST 2019
+base.0=C\:\\Users\\boybo\\Desktop\\MSP06_IndoorProximityAlert\\galgot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.0=classes.dex
+renamed.0=classes.dex
