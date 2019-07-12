@@ -1,0 +1,185 @@
+From d2c8dad0f3abcec73d4b688d0ef7dfbd29e4faad Mon Sep 17 00:00:00 2001
+From: loststar07 <loststar07@naver.com>
+Date: Fri, 12 Jul 2019 22:22:42 +0900
+Subject: [PATCH] =?UTF-8?q?Revert=20"=EB=A1=9C=EA=B7=B8=EC=9D=B8=EB=A7=8C?=
+ =?UTF-8?q?=20=EB=B0=94=EA=BF=88"?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This reverts commit 3ecfb9959669f8f93fb9fcb34e24c052c77cacf1.
+---
+ .../galgot/.idea/codeStyles/Project.xml       | 29 ++++++++++
+ .../galgot/.idea/encodings.xml                |  4 --
+ .../galgot/.idea/vcs.xml                      |  6 --
+ .../app/src/main/res/layout/activity_main.xml | 58 ++++---------------
+ 4 files changed, 40 insertions(+), 57 deletions(-)
+ create mode 100644 MSP06_IndoorProximityAlert/galgot/.idea/codeStyles/Project.xml
+ delete mode 100644 MSP06_IndoorProximityAlert/galgot/.idea/encodings.xml
+ delete mode 100644 MSP06_IndoorProximityAlert/galgot/.idea/vcs.xml
+
+diff --git a/MSP06_IndoorProximityAlert/galgot/.idea/codeStyles/Project.xml b/MSP06_IndoorProximityAlert/galgot/.idea/codeStyles/Project.xml
+new file mode 100644
+index 0000000..30aa626
+--- /dev/null
++++ b/MSP06_IndoorProximityAlert/galgot/.idea/codeStyles/Project.xml
+@@ -0,0 +1,29 @@
++<component name="ProjectCodeStyleConfiguration">
++  <code_scheme name="Project" version="173">
++    <Objective-C-extensions>
++      <file>
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Import" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Macro" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Typedef" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Enum" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Constant" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Global" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Struct" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="FunctionPredecl" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Function" />
++      </file>
++      <class>
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Property" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Synthesize" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InitMethod" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="StaticMethod" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InstanceMethod" />
++        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="DeallocMethod" />
++      </class>
++      <extensions>
++        <pair source="cpp" header="h" fileNamingConvention="NONE" />
++        <pair source="c" header="h" fileNamingConvention="NONE" />
++      </extensions>
++    </Objective-C-extensions>
++  </code_scheme>
++</component>
+\ No newline at end of file
+diff --git a/MSP06_IndoorProximityAlert/galgot/.idea/encodings.xml b/MSP06_IndoorProximityAlert/galgot/.idea/encodings.xml
+deleted file mode 100644
+index 15a15b2..0000000
+--- a/MSP06_IndoorProximityAlert/galgot/.idea/encodings.xml
++++ /dev/null
+@@ -1,4 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
+-</project>
+\ No newline at end of file
+diff --git a/MSP06_IndoorProximityAlert/galgot/.idea/vcs.xml b/MSP06_IndoorProximityAlert/galgot/.idea/vcs.xml
+deleted file mode 100644
+index b2bdec2..0000000
+--- a/MSP06_IndoorProximityAlert/galgot/.idea/vcs.xml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+diff --git a/MSP06_IndoorProximityAlert/galgot/app/src/main/res/layout/activity_main.xml b/MSP06_IndoorProximityAlert/galgot/app/src/main/res/layout/activity_main.xml
+index af181a3..b8238ef 100644
+--- a/MSP06_IndoorProximityAlert/galgot/app/src/main/res/layout/activity_main.xml
++++ b/MSP06_IndoorProximityAlert/galgot/app/src/main/res/layout/activity_main.xml
+@@ -21,10 +21,9 @@
+         android:inputType="text"
+         app:layout_constraintBottom_toTopOf="@+id/etPassword"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.43"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.989" />
++        app:layout_constraintVertical_bias="1.0" />
+ 
+     <EditText
+         android:id="@+id/etPassword"
+@@ -41,10 +40,8 @@
+         android:inputType="textPassword"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.43"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.789" />
++        app:layout_constraintTop_toTopOf="parent" />
+ 
+     <Button
+         android:id="@+id/btnRegist"
+@@ -60,63 +57,30 @@
+         android:textSize="20dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.147"
++        app:layout_constraintHorizontal_bias="0.76"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/etPassword"
+-        app:layout_constraintVertical_bias="0.178" />
++        app:layout_constraintVertical_bias="0.0" />
+ 
+     <Button
+-        android:id="@+id/FindID/PW"
+-        android:layout_width="147dp"
+-        android:layout_height="49dp"
++        android:id="@+id/btnLogin"
++        android:layout_width="110dp"
++        android:layout_height="50dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginLeft="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginRight="8dp"
+         android:layout_marginBottom="8dp"
+-        android:text="ID/PW찾기"
+-        android:textSize="20dp"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.181"
+-        app:layout_constraintStart_toEndOf="@+id/btnRegist"
+-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+-        app:layout_constraintVertical_bias="0.192" />
+-
+-    <Button
+-        android:id="@+id/btnLogin"
+-        android:layout_width="80dp"
+-        android:layout_height="113dp"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginLeft="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:layout_marginRight="8dp"
+-        android:layout_marginBottom="120dp"
+         android:text="로그인"
+         android:textSize="20dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-
+-        app:layout_constraintStart_toEndOf="@+id/etId" />
++        app:layout_constraintHorizontal_bias="0.25"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/etPassword"
++        app:layout_constraintVertical_bias="0.0" />
+ 
+-    <TextView
+-        android:layout_width="44dp"
+-        android:layout_height="108dp"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginLeft="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:layout_marginRight="8dp"
+-        android:layout_marginBottom="20dp"
+-        android:text="ID\n\n\nPW"
+-        android:textColor="#000000"
+-        android:textSize="20dp"
+-        android:background="#2222"
+-        app:layout_constraintBottom_toTopOf="@+id/btnRegist"
+-        app:layout_constraintEnd_toStartOf="@+id/etId"
+-        app:layout_constraintHorizontal_bias="0.562"
+-        app:layout_constraintStart_toStartOf="parent" />
+ 
+ 
+ </android.support.constraint.ConstraintLayout>
+\ No newline at end of file
+-- 
+2.20.1.windows.1
+
